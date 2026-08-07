@@ -1,0 +1,6 @@
+{
+  "name": "TheDesi.news - Portugal Desi News & Community Platform",
+  "description": "Portugal-focused Desi immigrant news, information, AIMA/immigration guidance, community help, and AI support platform.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
