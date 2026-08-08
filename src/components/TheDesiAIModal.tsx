@@ -124,22 +124,22 @@ export const TheDesiAIModal: React.FC<TheDesiAIModalProps> = ({ isOpen, onClose,
   };
 
   return (
-    <div className="fixed inset-0 z-50 bg-stone-950/80 backdrop-blur-md flex items-center justify-center p-3 sm:p-4">
-      <div className="bg-stone-900 border border-stone-800 text-stone-100 max-w-3xl w-full h-[88vh] rounded-2xl shadow-2xl flex flex-col overflow-hidden">
+    <div className="fixed inset-0 z-50 bg-stone-900/60 backdrop-blur-md flex items-center justify-center p-3 sm:p-4">
+      <div className="bg-white border border-stone-200 text-stone-900 max-w-3xl w-full h-[88vh] rounded-2xl shadow-2xl flex flex-col overflow-hidden">
         {/* Header */}
-        <div className="p-4 bg-stone-950 border-b border-stone-800 flex items-center justify-between">
+        <div className="p-4 bg-stone-900 text-white border-b border-stone-800 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-600 to-teal-500 flex items-center justify-center shadow-lg">
-              <Sparkles className="w-5 h-5 text-stone-950" />
+            <div className="w-10 h-10 rounded-xl bg-[#cc0000] text-white flex items-center justify-center shadow-md">
+              <Sparkles className="w-5 h-5 text-white" />
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <h3 className="font-serif font-bold text-base text-white">TheDesi AI</h3>
-                <span className="bg-emerald-950 text-emerald-400 border border-emerald-800 text-[10px] font-extrabold px-2 py-0.5 rounded-full">
+                <h3 className="font-serif font-black text-lg text-white">TheDesi AI</h3>
+                <span className="bg-[#cc0000] text-white text-[10px] font-black px-2 py-0.5 rounded uppercase tracking-wider">
                   GEMINI 3.6
                 </span>
               </div>
-              <p className="text-[11px] text-stone-400">
+              <p className="text-xs text-stone-300">
                 Verified Portugal Immigration & Community Assistant
               </p>
             </div>
@@ -147,41 +147,41 @@ export const TheDesiAIModal: React.FC<TheDesiAIModalProps> = ({ isOpen, onClose,
 
           <button
             onClick={onClose}
-            className="p-1.5 rounded-lg text-stone-400 hover:text-stone-100 hover:bg-stone-800"
+            className="p-1.5 rounded-lg text-stone-300 hover:text-white hover:bg-stone-800 transition"
           >
             <X className="w-5 h-5" />
           </button>
         </div>
 
         {/* Legal Banner */}
-        <div className="px-4 py-2 bg-stone-950/90 border-b border-stone-800/80 flex items-center gap-2 text-[11px] text-stone-400">
-          <AlertTriangle className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+        <div className="px-4 py-2 bg-stone-50 border-b border-stone-200 flex items-center gap-2 text-xs text-stone-600">
+          <AlertTriangle className="w-4 h-4 text-amber-600 shrink-0" />
           <span>
-            TheDesi AI provides general information based on official Portuguese sources. For legal/tax advice, consult verified professionals.
+            TheDesi AI provides general guidance based on official Portuguese sources. For legal or tax advice, consult verified professionals.
           </span>
         </div>
 
         {/* Chat History */}
-        <div className="flex-1 overflow-y-auto p-4 space-y-4">
+        <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-stone-50/50">
           {messages.map((msg) => (
             <div
               key={msg.id}
               className={`flex gap-3 ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}
             >
               {msg.sender === 'assistant' && (
-                <div className="w-8 h-8 rounded-lg bg-emerald-600/20 border border-emerald-500/30 flex items-center justify-center shrink-0 mt-1">
-                  <Bot className="w-4 h-4 text-emerald-400" />
+                <div className="w-8 h-8 rounded-lg bg-[#cc0000] text-white flex items-center justify-center shrink-0 mt-1 shadow-sm">
+                  <Bot className="w-4 h-4 text-white" />
                 </div>
               )}
 
-              <div className={`max-w-[85%] rounded-2xl p-4 text-xs leading-relaxed ${
+              <div className={`max-w-[85%] rounded-2xl p-4 text-xs leading-relaxed shadow-sm ${
                 msg.sender === 'user'
-                  ? 'bg-emerald-600 text-stone-950 font-medium rounded-tr-none'
-                  : 'bg-stone-800/90 border border-stone-700/80 text-stone-100 rounded-tl-none'
+                  ? 'bg-[#cc0000] text-white font-medium rounded-tr-none'
+                  : 'bg-white border border-stone-200 text-stone-900 rounded-tl-none'
               }`}>
                 {/* User Message */}
                 {msg.sender === 'user' && (
-                  <p className="font-medium text-stone-950 text-sm">{msg.text}</p>
+                  <p className="font-semibold text-white text-sm">{msg.text}</p>
                 )}
 
                 {/* Assistant Message */}
@@ -189,28 +189,28 @@ export const TheDesiAIModal: React.FC<TheDesiAIModalProps> = ({ isOpen, onClose,
                   <div className="space-y-3">
                     {/* 60-Word Quick Summary Badge */}
                     {msg.summary60 && (
-                      <div className="p-3 bg-stone-950/80 border-l-4 border-emerald-500 rounded-r-xl">
-                        <div className="flex items-center gap-1 text-[10px] font-bold uppercase tracking-wider text-emerald-400 mb-1">
-                          <Clock className="w-3 h-3 text-emerald-400" />
-                          60-Word Quick Summary
+                      <div className="p-3 bg-stone-50 border-l-4 border-[#cc0000] rounded-r-xl border-y border-r border-stone-200">
+                        <div className="flex items-center gap-1 text-[10px] font-black uppercase tracking-wider text-[#cc0000] mb-1">
+                          <Clock className="w-3.5 h-3.5 text-[#cc0000]" />
+                          60-WORD QUICK SUMMARY
                         </div>
-                        <p className="text-stone-300 font-medium text-xs leading-relaxed">
+                        <p className="text-stone-800 font-medium text-xs leading-relaxed">
                           {msg.summary60}
                         </p>
                       </div>
                     )}
 
                     {/* Detailed Answer */}
-                    <div className="whitespace-pre-line text-stone-200 text-xs leading-relaxed">
+                    <div className="whitespace-pre-line text-stone-800 text-xs leading-relaxed font-sans">
                       {msg.text}
                     </div>
 
                     {/* Official Sources */}
                     {msg.officialSources && msg.officialSources.length > 0 && (
-                      <div className="pt-2 border-t border-stone-700/60">
-                        <span className="text-[10px] font-bold uppercase text-stone-400 block mb-1.5 flex items-center gap-1">
-                          <ShieldCheck className="w-3 h-3 text-emerald-400" />
-                          Verified Official Sources
+                      <div className="pt-2.5 border-t border-stone-200">
+                        <span className="text-[10px] font-black uppercase tracking-wider text-stone-500 block mb-1.5 flex items-center gap-1">
+                          <ShieldCheck className="w-3.5 h-3.5 text-[#cc0000]" />
+                          VERIFIED OFFICIAL SOURCES
                         </span>
                         <div className="flex flex-wrap gap-2">
                           {msg.officialSources.map((src, idx) => (
@@ -219,10 +219,10 @@ export const TheDesiAIModal: React.FC<TheDesiAIModalProps> = ({ isOpen, onClose,
                               href={src.url}
                               target="_blank"
                               rel="noreferrer"
-                              className="px-2.5 py-1 rounded-md bg-stone-900 border border-stone-700 hover:border-emerald-500 text-stone-300 hover:text-emerald-300 text-[11px] flex items-center gap-1 transition"
+                              className="px-2.5 py-1 rounded-lg bg-stone-50 border border-stone-200 hover:border-[#cc0000] text-stone-800 hover:text-[#cc0000] text-[11px] font-semibold flex items-center gap-1 transition shadow-xs"
                             >
                               <span>{src.title}</span>
-                              <ExternalLink className="w-3 h-3 text-emerald-400" />
+                              <ExternalLink className="w-3 h-3 text-[#cc0000]" />
                             </a>
                           ))}
                         </div>
@@ -237,9 +237,9 @@ export const TheDesiAIModal: React.FC<TheDesiAIModalProps> = ({ isOpen, onClose,
                             onClose();
                             onBookAppointment();
                           }}
-                          className="w-full py-2 bg-emerald-600 hover:bg-emerald-500 text-stone-950 font-bold text-xs rounded-xl shadow transition flex items-center justify-center gap-2"
+                          className="w-full py-2.5 bg-[#cc0000] hover:bg-[#b30000] text-white font-extrabold text-xs rounded-xl shadow transition flex items-center justify-center gap-2"
                         >
-                          <Calendar className="w-4 h-4 text-stone-950" />
+                          <Calendar className="w-4 h-4 text-white" />
                           <span>Need personal help? Book appointment with a Helper</span>
                         </button>
                       </div>
@@ -247,22 +247,22 @@ export const TheDesiAIModal: React.FC<TheDesiAIModalProps> = ({ isOpen, onClose,
                   </div>
                 )}
 
-                <div className={`text-[9px] mt-2 text-right ${msg.sender === 'user' ? 'text-stone-900 font-bold' : 'text-stone-500'}`}>
+                <div className={`text-[9px] mt-2 text-right ${msg.sender === 'user' ? 'text-stone-100 font-bold' : 'text-stone-400 font-medium'}`}>
                   {msg.timestamp}
                 </div>
               </div>
 
               {msg.sender === 'user' && (
-                <div className="w-8 h-8 rounded-lg bg-stone-800 border border-stone-700 flex items-center justify-center shrink-0 mt-1">
-                  <UserIcon className="w-4 h-4 text-stone-300" />
+                <div className="w-8 h-8 rounded-lg bg-stone-200 border border-stone-300 flex items-center justify-center shrink-0 mt-1">
+                  <UserIcon className="w-4 h-4 text-stone-700" />
                 </div>
               )}
             </div>
           ))}
 
           {loading && (
-            <div className="flex gap-3 items-center text-stone-400 text-xs italic p-2 bg-stone-950/50 rounded-xl">
-              <Sparkles className="w-4 h-4 text-emerald-400 animate-spin" />
+            <div className="flex gap-3 items-center text-stone-600 text-xs italic p-3 bg-white border border-stone-200 rounded-xl shadow-xs">
+              <Sparkles className="w-4 h-4 text-[#cc0000] animate-spin" />
               <span>Consulting verified Portuguese knowledge base & AIMA rules...</span>
             </div>
           )}
@@ -272,14 +272,16 @@ export const TheDesiAIModal: React.FC<TheDesiAIModalProps> = ({ isOpen, onClose,
 
         {/* Sample Prompts */}
         {messages.length <= 2 && (
-          <div className="p-3 bg-stone-950 border-t border-stone-800">
-            <span className="text-[10px] font-bold text-stone-400 uppercase block mb-1.5">Suggested Questions:</span>
+          <div className="p-3 bg-white border-t border-stone-200">
+            <span className="text-[10px] font-black text-stone-500 uppercase block mb-1.5 tracking-wider">
+              SUGGESTED QUESTIONS:
+            </span>
             <div className="flex flex-wrap gap-1.5">
               {samplePrompts.map((p, idx) => (
                 <button
                   key={idx}
                   onClick={() => handleSend(p)}
-                  className="px-2.5 py-1 rounded-lg bg-stone-800 hover:bg-stone-700 border border-stone-700 text-stone-300 text-[11px] text-left transition truncate max-w-xs"
+                  className="px-3 py-1.5 rounded-lg bg-stone-50 hover:bg-stone-100 border border-stone-200 text-stone-800 text-[11px] font-semibold text-left hover:border-[#cc0000] hover:text-[#cc0000] transition truncate max-w-xs shadow-2xs"
                 >
                   {p}
                 </button>
@@ -289,7 +291,7 @@ export const TheDesiAIModal: React.FC<TheDesiAIModalProps> = ({ isOpen, onClose,
         )}
 
         {/* Input Bar */}
-        <div className="p-3 bg-stone-950 border-t border-stone-800">
+        <div className="p-3 bg-white border-t border-stone-200">
           <form
             onSubmit={(e) => {
               e.preventDefault();
@@ -302,12 +304,12 @@ export const TheDesiAIModal: React.FC<TheDesiAIModalProps> = ({ isOpen, onClose,
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder="Ask anything about AIMA, NIF, NISS, SNS, healthcare, or legal help..."
-              className="flex-1 bg-stone-900 border border-stone-700/80 rounded-xl px-4 py-2.5 text-stone-100 text-xs focus:outline-none focus:border-emerald-500 placeholder-stone-500"
+              className="flex-1 bg-stone-50 border border-stone-300 rounded-xl px-4 py-2.5 text-stone-900 text-xs focus:outline-none focus:border-[#cc0000] focus:bg-white placeholder-stone-400 font-medium transition"
             />
             <button
               type="submit"
               disabled={!input.trim() || loading}
-              className="px-4 py-2.5 bg-emerald-500 hover:bg-emerald-400 disabled:opacity-50 text-stone-950 font-extrabold text-xs rounded-xl transition flex items-center gap-1.5"
+              className="px-5 py-2.5 bg-[#cc0000] hover:bg-[#b30000] disabled:opacity-50 text-white font-black text-xs rounded-xl transition flex items-center gap-1.5 shadow"
             >
               <span>Ask</span>
               <Send className="w-3.5 h-3.5" />

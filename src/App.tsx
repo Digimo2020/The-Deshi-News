@@ -52,7 +52,7 @@ function MainApp() {
   };
 
   return (
-    <div className="min-h-screen bg-stone-100 text-stone-900 flex flex-col font-sans selection:bg-emerald-500 selection:text-white">
+    <div className="min-h-screen bg-white text-stone-900 flex flex-col font-sans selection:bg-[#cc0000] selection:text-white">
       {/* Header */}
       <Header
         activeTab={activeTab}

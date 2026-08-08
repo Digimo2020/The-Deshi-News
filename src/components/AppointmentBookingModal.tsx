@@ -66,12 +66,12 @@ export const AppointmentBookingModal: React.FC<AppointmentBookingModalProps> = (
     <div className="fixed inset-0 z-50 bg-stone-950/80 backdrop-blur-sm flex items-center justify-center p-4">
       <div className="bg-white max-w-lg w-full rounded-2xl shadow-2xl overflow-hidden border border-stone-200">
         {/* Header */}
-        <div className="p-5 bg-stone-900 text-white flex items-center justify-between">
+        <div className="p-5 bg-stone-900 text-white flex items-center justify-between border-b border-stone-800">
           <div className="flex items-center gap-2">
-            <Calendar className="w-5 h-5 text-emerald-400" />
-            <h3 className="font-serif font-bold text-lg text-white">Book Help Appointment</h3>
+            <Calendar className="w-5 h-5 text-[#cc0000]" />
+            <h3 className="font-serif font-black text-lg text-white">Book Help Appointment</h3>
           </div>
-          <button onClick={onClose} className="text-stone-400 hover:text-white">
+          <button onClick={onClose} className="text-stone-300 hover:text-white p-1 rounded hover:bg-stone-800 transition">
             <X className="w-5 h-5" />
           </button>
         </div>
@@ -181,7 +181,7 @@ export const AppointmentBookingModal: React.FC<AppointmentBookingModalProps> = (
               <button
                 type="submit"
                 disabled={loading}
-                className="px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs rounded-xl shadow transition"
+                className="px-5 py-2.5 bg-[#cc0000] hover:bg-[#b30000] text-white font-extrabold text-xs rounded-xl shadow transition"
               >
                 {loading ? 'Submitting...' : 'Confirm Appointment'}
               </button>

@@ -51,22 +51,22 @@ export const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose, onSel
     <div className="fixed inset-0 z-50 bg-stone-950/80 backdrop-blur-md flex items-start justify-center p-4 pt-16">
       <div className="bg-white max-w-2xl w-full rounded-2xl shadow-2xl overflow-hidden border border-stone-200 max-h-[80vh] flex flex-col">
         {/* Search Header */}
-        <div className="p-4 bg-stone-900 text-white flex items-center gap-3 border-b border-stone-800">
-          <Search className="w-5 h-5 text-emerald-400 shrink-0" />
+        <div className="p-4 bg-[#cc0000] text-white flex items-center gap-3 border-b border-stone-200 shadow-md">
+          <Search className="w-5 h-5 text-white shrink-0" />
           <input
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Search news, AIMA, NIF, NISS, SNS, healthcare, legal support..."
-            className="w-full bg-transparent text-white text-sm focus:outline-none placeholder-stone-400"
+            className="w-full bg-transparent text-white text-sm focus:outline-none placeholder-stone-200 font-medium"
             autoFocus
           />
           {query && (
-            <button onClick={() => setQuery('')} className="text-stone-400 hover:text-white text-xs">
+            <button onClick={() => setQuery('')} className="text-stone-200 hover:text-white text-xs font-bold uppercase">
               Clear
             </button>
           )}
-          <button onClick={onClose} className="p-1 rounded-lg text-stone-400 hover:text-white">
+          <button onClick={onClose} className="p-1 rounded-lg text-stone-200 hover:text-white hover:bg-stone-800/30">
             <X className="w-5 h-5" />
           </button>
         </div>
