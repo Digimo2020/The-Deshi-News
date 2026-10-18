@@ -2,6 +2,8 @@
 
 > **Empowering South Asian Immigrants in Portugal with News, Guidance & Community Support**
 
+> 🚧 **Status**: In Development - Platform launching soon. Feature images to be added to `/assets/features/` directory.
+
 ![TheDesi.news Hero](./assets/hero-banner.png)
 
 ---
@@ -302,16 +304,9 @@ We welcome contributions from the community! Please see our [CONTRIBUTING.md](./
 
 ---
 
-## 📊 Platform Statistics
+---
 
-| Metric | Value |
-|--------|-------|
-| Active Members | 2,500+ |
-| News Articles | 500+ |
-| Resource Listings | 1,000+ |
-| Help Center Articles | 200+ |
-| Supported Languages | 5 (expanding) |
-| Community Events/Month | 15+ |
+**Note**: Platform statistics will be tracked once TheDesi.news launches. Currently in development.
 
 ---
 
@@ -342,16 +337,16 @@ This project is licensed under the MIT License - see the [LICENSE](./LICENSE) fi
 
 ---
 
-## 📬 Stay Connected
+## 📬 Coming Soon
 
-Subscribe to our newsletter for:
+TheDesi.news is currently under development. Features will include:
 - Weekly curated news
 - Immigration updates
 - Community events
 - Job opportunities
 - Featured stories
 
-**[Subscribe Now](https://thedesi.news/subscribe)**
+**Newsletter subscription will be available upon launch.**
 
 ---
 
@@ -361,10 +356,3 @@ Subscribe to our newsletter for:
 
 ---
 
-## Quick Links
-
-- [Website](https://thedesi.news)
-- [Help Center](https://thedesi.news/help)
-- [Community Forum](https://thedesi.news/community)
-- [Contact Us](https://thedesi.news/contact)
-- [Feedback](https://thedesi.news/feedback)
